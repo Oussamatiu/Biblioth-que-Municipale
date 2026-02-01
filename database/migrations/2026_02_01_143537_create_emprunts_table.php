@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->date('emprunted_at');
             $table->date('returned_at');
+            $table->foreignId('book_id')->constrained();
+            $table->foreignId('member_id')->constrained();
             $table->timestamps();
         });
     }

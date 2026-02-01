@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('isbn')->unique();
             $table->integer('quantity');
             $table->date('published_at');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
